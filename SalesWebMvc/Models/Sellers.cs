@@ -14,7 +14,7 @@ namespace SalesWebMvc.Models
         public double BaseSalary { get; set; }
 
 
-        public Departments Department { get; set; }
+        public Department Department { get; set; }
         public int DepartmentId { get; set; }
 
 
@@ -24,7 +24,7 @@ namespace SalesWebMvc.Models
         {
         }
 
-        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Departments department)
+        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
             Id = id;
             Name = name;

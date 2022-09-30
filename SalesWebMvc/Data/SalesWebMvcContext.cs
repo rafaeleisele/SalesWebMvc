@@ -16,17 +16,17 @@ namespace SalesWebMvc.Data
         {
         }
 
-        public DbSet<Departments> Departments { get; set; } = default!;
+        public DbSet<Department> Departments { get; set; } = default!;
         public DbSet<SalesRecord> SalesRecords { get; set; } = default!;
         public DbSet<Seller> Sellers { get; set; } = default!;
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            Departments d1 = new Departments(1, "Computers");
-            Departments d2 = new Departments(2, "Electronics");
-            Departments d3 = new Departments(3, "Fashion");
-            Departments d4 = new Departments(4, "Books");
+            Department d1 = new Department(1, "Computers");
+            Department d2 = new Department(2, "Electronics");
+            Department d3 = new Department(3, "Fashion");
+            Department d4 = new Department(4, "Books");
 
             Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 2000.0, d1);
             Seller s2 = new Seller(2, "Maria Grenn", "Maria@gmail.com", new DateTime(1992, 3, 1), 5000.0, d2);
@@ -66,7 +66,7 @@ namespace SalesWebMvc.Data
             SalesRecord r29 = new SalesRecord(29, new DateTime(2018, 10, 23), 12000.0, SaleStatus.Billed, s5);
             SalesRecord r30 = new SalesRecord(30, new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
 
-            modelBuilder.Entity<Departments>().HasData(new[] { d1, d2, d3, d4 });
+            modelBuilder.Entity<Department>().HasData(new[] { d1, d2, d3, d4 });
 
             modelBuilder.Entity<Seller>().HasData(new[] { s1, s2, s3, s4, s5, s6 });
 
