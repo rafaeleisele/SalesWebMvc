@@ -1,4 +1,5 @@
-﻿using SalesWebMvc.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Services
@@ -15,6 +16,12 @@ namespace SalesWebMvc.Services
         public List<Seller> FindAll()
         {
             return _context.Sellers.ToList();
+        }
+
+        public void Insert(Seller Obj)
+        {
+            _context.Add(Obj);
+            _context.SaveChanges();
         }
     }
 }
