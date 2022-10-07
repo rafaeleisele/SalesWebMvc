@@ -11,7 +11,7 @@ namespace SalesWebMvc.Models
         public SaleStatus Status { get; set; }
         
         
-        public Seller Seller { get; set; }
+        public Seller? Seller { get; set; }
         public int SellerId { get; set; }
 
 
