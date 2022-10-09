@@ -20,14 +20,14 @@ builder.Services.AddScoped<DepartmentService>();
 
 var app = builder.Build();
 
-//Alterando a localização da aplicação
-var enUS = new CultureInfo("en-US");
-var LocalizationOptions = new RequestLocalizationOptions
-{
-    DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(enUS),
-    SupportedCultures = new List<CultureInfo> { enUS },
-    SupportedUICultures = new List<CultureInfo> { enUS }
-};
+////Alterando a localização da aplicação
+//var enUS = new CultureInfo("en-US");
+//var LocalizationOptions = new RequestLocalizationOptions
+//{
+//    DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(enUS),
+//    SupportedCultures = new List<CultureInfo> { enUS },
+//    SupportedUICultures = new List<CultureInfo> { enUS }
+//};
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
